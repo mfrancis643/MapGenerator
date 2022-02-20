@@ -1,0 +1,157 @@
+body{
+  font-family: Arial;
+  height: 100%;
+}
+
+html, body{
+  padding: 0;
+  margin: 0;
+}
+html{
+  height: 100%;
+  background-color: #F4FBFC;
+}
+
+
+h3{
+  color:#254E70;
+  font-size: 18px;
+}
+
+Table{
+  width: 100%;
+  border: solid black 1px;
+
+}
+
+th{
+  border: solid black 1px;
+  padding: 5px;
+  font-size: 14px;
+}
+
+td{
+  border-left: solid black 1px;
+  padding: 5px;
+}
+
+
+.headBanner{
+  background-color:#000;
+  height: 70px;
+  width: 100%;
+}
+
+.logoContainer{
+  height: calc(100% - 16px);
+  padding: 8px;
+  color: white;
+  font-size: 35px;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+.logoWriting{
+  height: 100%;
+  text-align: center;
+}
+
+.spacerMargin{
+  height: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: #fff;
+}
+
+#root{
+  height: calc(100% - 70px);
+}
+
+.content{
+  height: auto;
+  flex-grow: 1;
+}
+
+
+.main{
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  height: 100%;
+  color: #787878;
+  font-size: 18px;
+}
+
+.hexagon {
+  overflow: visible;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 28px solid #64C7CC;
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 28px solid #64C7CC;
+}
+
+.drawer {
+  width: 400px;
+  flex-shrink: 0
+}
+
+.drawerPaper {
+  width: 400px
+}
+
+.mapWrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 0fr);
+}
+
+/*.drawerMarginCompensation{*/
+/*  position: absolute;*/
+/*  left: 400px;*/
+/*}*/
+
+
+
+.propertyContainer{
+  padding:20px
+}
+
+.brown{
+  background-color: saddlebrown !important;
+}
+
+#myHexGrid{
+  width:auto;
+  position: absolute;
+  left: 400px;
+}
+
+.grid-container {
+  display: grid;
+    grid-template-columns: 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px 37.5px;
+  margin-bottom: 50px;
+
+}
+.grid-item {
+  border: 0px solid rgba(0, 0, 0, 0.8);
+  margin: 3px;
+  font-size: 30px;
+  text-align: center;
+  height: 43px;
+  overflow: visible;
+}

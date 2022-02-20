@@ -5,7 +5,7 @@ const HeadBanner = () => {
         <div className="headBanner">
           <div className="logoContainer">
           <div className = "logoWriting">
-            test
+              HexMapCreator
           </div>
           </div>
         </div>
