@@ -36,7 +36,7 @@ const Main = () => {
     })
 
     const initializeMap = (() => {
-        return generateNewMap(30, 30)
+        return generateNewMap(10, 10)
     })
 
     const copyToClipBoard = (() => {
@@ -47,13 +47,18 @@ const Main = () => {
     const [mapObject, setMapObject] = useState(initializeMap());
     const [inspectedId, setInspectedId] = useState(0);
     const [tileObj, setTileObj] = useState(mapObject[inspectedId])
+    const [applyToggle, setApplyToggle] = useState(false)
+
+    useEffect(()=> {
+        console.log("applyToggle")
+        console.log(applyToggle)
+    }, [applyToggle])
     useEffect(()=>{
         console.log('updating tile obj')
         setTileObj(mapObject[inspectedId])
     }, [mapObject, inspectedId])
     const [mapWidth, setMapWidth] = useState(20)
     const [mapHeight, setMapHeight] = useState(11)
-    console.log(mapObject)
 
 
     return (
@@ -64,12 +69,16 @@ const Main = () => {
                     tileObj={tileObj}
                     enums ={enums}
                     mapObj={mapObject}
+                    setApplyToToggle={(v) => setApplyToggle(v)}
+                    applyToggled = {applyToggle}
 
                 />
                 <MapWrapper
                     mapObj={mapObject}
+                    setMapObj={(da) => setMapObject(da)}
                     setInspectedId={setInspectedId}
                     inspectedId={inspectedId}
+                    applyToggled ={applyToggle}
 
                 />
 

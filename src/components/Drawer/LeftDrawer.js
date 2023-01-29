@@ -1,19 +1,15 @@
 import React, {useEffect, useState} from "react";
-import {Button, Drawer} from "@material-ui/core";
+import {Button, Checkbox, Drawer} from "@material-ui/core";
 import TileDataTextBox from "../TileDataTextBox/TileDataTextBox";
 import TileDataDropdown from "../TileDataDropdown";
 
-const LeftDrawer = ({tileObj, copyToClipBoard, updateTileObj, enums, mapObj}) => {
-    console.log("tileObj")
-    console.log(tileObj)
+const LeftDrawer = ({tileObj, copyToClipBoard, updateTileObj, enums, mapObj, setApplyToToggle, applyToggled}) => {
     const [newTileObj, setNewTileObj] = useState(tileObj)
     useEffect(() => {
-        console.log('useffect')
         // updateTileObj(newTileObj)
 
     }, tileObj)
     let keys = Object.keys(newTileObj)
-    console.log(keys)
 
 
 
@@ -62,6 +58,8 @@ const LeftDrawer = ({tileObj, copyToClipBoard, updateTileObj, enums, mapObj}) =>
             </div>
 
             <Button onClick={()=>{copyToClipBoard(newTileObj)}}>Copy Map Object To Clipboard</Button>
+            <br/>
+            <p>Apply to tile click toggle <Checkbox checked={applyToggled} onChange={(e) => (setApplyToToggle(e.target.checked))}/></p>
         </Drawer>
     );
 };
