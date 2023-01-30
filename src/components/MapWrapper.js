@@ -22,13 +22,7 @@ const MapWrapper = ({mapObj, setMapObj, setInspectedId, inspectedId, applyToggle
         var tiles = []
         Object.assign(dataToCopy, mapObj[inspectedId])
         Object.assign(tiles, mapObj)
-        console.log("dataToCopy")
-        console.log(dataToCopy)
-        console.log("tiles")
-        console.log(tiles)
         const tempId = tiles[clickedId].id
-        console.log("tempId")
-        console.log(tempId)
         tiles[clickedId] = dataToCopy
         tiles[clickedId].id = tempId
         setMapObj(tiles);
